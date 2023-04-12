@@ -3,6 +3,8 @@ import './App.css';
 import Greet from './greet'
 import Greeting from './Greeting'
 import GreetClass from './GreetClass';
+import StateClass from './StateClass';
+import StateFunction from './StateFunction';
 function App() {
 
   const oneHandler=()=>{
@@ -13,13 +15,16 @@ function App() {
   }
   return (
     <div className="App">
-     Hello to react
+      <StateClass/>
+      <StateFunction/>
+      
+     {/* Hello to react
      <Greeting name="Code" handleClick={oneHandler} value="Submit"/>
      <Greeting name="John" value="Send"  handleClick={secondHandler}/>
 
 <GreetClass name="Sample"/>
 
-    
+     */}
 
     </div>
   );
