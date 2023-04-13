@@ -5,6 +5,10 @@ import Greeting from './Greeting'
 import GreetClass from './GreetClass';
 import StateClass from './StateClass';
 import StateFunction from './StateFunction';
+
+import UI from './Ui';
+import Sum from './Sum';
+import AllRecords from './AllRecords';
 function App() {
 
   const oneHandler=()=>{
@@ -15,8 +19,14 @@ function App() {
   }
   return (
     <div className="App">
-      <StateClass/>
-      <StateFunction/>
+      <AllRecords/>
+      {/* <Sum/> */}
+      
+      {/* <StateClass/>
+      <StateFunction/> */}
+
+    {/* <UI/> */}
+    
       
      {/* Hello to react
      <Greeting name="Code" handleClick={oneHandler} value="Submit"/>
