@@ -1,7 +1,8 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Link } from 'react-router-dom';
-class AllRecords extends React.Component {
+import ViewRecord from './ViewRecord1';
+class ViewRecord extends React.Component {
 
     state={data:[]};
 
@@ -10,7 +11,7 @@ class AllRecords extends React.Component {
     {
         fetch("data.json")
         .then(response=>response.json())
-        .then(res=>this.setState({data:res}));
+        .then(res=>console.log(res));
         
 
 
@@ -44,7 +45,7 @@ class AllRecords extends React.Component {
 
                             this.state.data.map((item) => (
                                 <tr>
-                                    <th><Link to={`/View/${item.id}`}>View</Link></th>
+                                    <th><Link to={`/ViewRecord/${item.id}`}>View</Link></th>
                                     <td>{item.name}</td>
                                     <td>{item.age}</td>
                                 </tr>
@@ -61,4 +62,4 @@ class AllRecords extends React.Component {
         );
     }
 }
-export default AllRecords;
+export default ViewRecord;
